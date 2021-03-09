@@ -1,6 +1,5 @@
 package com.xm.studyproject;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -8,7 +7,7 @@ import android.widget.TextView;
 import com.xm.studyproject.annotation.BindApi;
 import com.xm.studyproject.annotation.BindClick;
 import com.xm.studyproject.annotation.BindId;
-import com.xm.studyproject.annotation.processorActivity;
+import com.xm.studyproject.reflect.ReflectDemo;
 
 import androidx.annotation.Keep;
 import androidx.appcompat.app.AppCompatActivity;
@@ -31,8 +30,9 @@ public class MainActivity extends AppCompatActivity {
         BindApi.bind(this);
         tvAnnotation.setText("运行期通过注解来设置成员变量");
         BindApi.click(this);
-        Intent intent = new Intent(this, processorActivity.class);
-        startActivity(intent);
+        ReflectDemo.testClass("com.xm.studyproject.reflect.Person");
+//        Intent intent = new Intent(this, processorActivity.class);
+//        startActivity(intent);
     }
 
 
