@@ -1,4 +1,4 @@
-package com.xm.studyproject.reflect;
+package com.xm.studyproject.java.reflect;
 
 public class Person {
     private String name;

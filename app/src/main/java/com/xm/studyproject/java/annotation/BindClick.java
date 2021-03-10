@@ -1,4 +1,4 @@
-package com.xm.studyproject.annotation;
+package com.xm.studyproject.java.annotation;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

@@ -1,4 +1,4 @@
-package com.xm.studyproject.annotation;
+package com.xm.studyproject.java.annotation;
 
 import android.os.Bundle;
 import android.view.View;

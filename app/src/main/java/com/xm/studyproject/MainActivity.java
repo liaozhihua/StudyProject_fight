@@ -4,11 +4,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
-import com.xm.studyproject.annotation.BindApi;
-import com.xm.studyproject.annotation.BindClick;
-import com.xm.studyproject.annotation.BindId;
-import com.xm.studyproject.reflect.Person;
-import com.xm.studyproject.reflect.ReflectDemo;
+import com.xm.studyproject.java.annotation.BindApi;
+import com.xm.studyproject.java.annotation.BindClick;
+import com.xm.studyproject.java.annotation.BindId;
+import com.xm.studyproject.java.proxy.dynamicPrxoy.DynamicProxyDemo;
+import com.xm.studyproject.java.proxy.dynamicPrxoy.DynamicTarget1;
+import com.xm.studyproject.java.proxy.dynamicPrxoy.DynamicTarget2;
+import com.xm.studyproject.java.proxy.dynamicPrxoy.PublicInterface2;
+import com.xm.studyproject.java.proxy.staticProxy.PublicInterface;
 
 import androidx.annotation.Keep;
 import androidx.appcompat.app.AppCompatActivity;
@@ -31,12 +34,23 @@ public class MainActivity extends AppCompatActivity {
         BindApi.bind(this);
         tvAnnotation.setText  ("运行期通过注解来设置成员变量");
         BindApi.click(this);
-        ReflectDemo.testClass("com.xm.studyproject.reflect.Person");
-        ReflectDemo.testConstructor("com.xm.studyproject.reflect.Person");
-        ReflectDemo.testMethod(Person.class);
-        ReflectDemo.testField(Person.class);
+//        ReflectDemo.testClass("com.xm.studyproject.java.reflect.Person");
+//        ReflectDemo.testConstructor("com.xm.studyproject.java.reflect.Person");
+//        ReflectDemo.testMethod(Person.class);
+//        ReflectDemo.testField(Person.class);
 //        Intent intent = new Intent(this, processorActivity.class);
 //        startActivity(intent);
+        //静态代理实例
+//        PublicInterface target1 = new Target1();
+//        StaticProxyDemo staticProxyDemo = new StaticProxyDemo(target1);
+//        staticProxyDemo.buyFood1();
+//        staticProxyDemo.buyFood2();
+        DynamicProxyDemo dynamicProxyDemo = new DynamicProxyDemo();
+        //获取动态代理类的实例
+        PublicInterface proxy1 = (PublicInterface) dynamicProxyDemo.getProxy(new DynamicTarget1());
+        String food1 = proxy1.buyFood1();
+        PublicInterface2 proxy2 = (PublicInterface2) dynamicProxyDemo.getProxy(new DynamicTarget2());
+        proxy2.buyFruit1();
     }
 
 

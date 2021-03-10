@@ -1,4 +1,4 @@
-package com.xm.studyproject.reflect;
+package com.xm.studyproject.java.reflect;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
