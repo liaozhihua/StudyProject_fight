@@ -7,11 +7,7 @@ import android.widget.TextView;
 import com.xm.studyproject.java.annotation.BindApi;
 import com.xm.studyproject.java.annotation.BindClick;
 import com.xm.studyproject.java.annotation.BindId;
-import com.xm.studyproject.java.proxy.dynamicPrxoy.DynamicProxyDemo;
-import com.xm.studyproject.java.proxy.dynamicPrxoy.DynamicTarget1;
-import com.xm.studyproject.java.proxy.dynamicPrxoy.DynamicTarget2;
-import com.xm.studyproject.java.proxy.dynamicPrxoy.PublicInterface2;
-import com.xm.studyproject.java.proxy.staticProxy.PublicInterface;
+import com.xm.studyproject.java.thread.threadpool.ThreadPoolDemo;
 
 import androidx.annotation.Keep;
 import androidx.appcompat.app.AppCompatActivity;
@@ -45,12 +41,27 @@ public class MainActivity extends AppCompatActivity {
 //        StaticProxyDemo staticProxyDemo = new StaticProxyDemo(target1);
 //        staticProxyDemo.buyFood1();
 //        staticProxyDemo.buyFood2();
-        DynamicProxyDemo dynamicProxyDemo = new DynamicProxyDemo();
+//        DynamicProxyDemo dynamicProxyDemo = new DynamicProxyDemo();
         //获取动态代理类的实例
-        PublicInterface proxy1 = (PublicInterface) dynamicProxyDemo.getProxy(new DynamicTarget1());
-        String food1 = proxy1.buyFood1();
-        PublicInterface2 proxy2 = (PublicInterface2) dynamicProxyDemo.getProxy(new DynamicTarget2());
-        proxy2.buyFruit1();
+//        PublicInterface proxy1 = (PublicInterface) dynamicProxyDemo.getProxy(new DynamicTarget1());
+//        String food1 = proxy1.buyFood1();
+//        PublicInterface2 proxy2 = (PublicInterface2) dynamicProxyDemo.getProxy(new DynamicTarget2());
+//        proxy2.buyFruit1();
+//        SingleThreadDemo threadDemo = new SingleThreadDemo();
+//        threadDemo.createThread();
+//        SyncDemo syncDemo = new SyncDemo();
+//        syncDemo.countAddSyn();
+//        ThreadLocalDemo threadLocalDemo = new ThreadLocalDemo();
+//        threadLocalDemo.test();
+//        LockDemo lockDemo = new LockDemo();
+//        lockDemo.test();
+//        lockDemo.test2();
+        ThreadPoolDemo threadPoolDemo = new ThreadPoolDemo();
+        threadPoolDemo.getThreadPool();
+        threadPoolDemo.test();
+//        ThreadPoolExample poolExample = new ThreadPoolExample();
+//        poolExample.test();
+
     }
 
 
