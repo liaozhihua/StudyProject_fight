@@ -59,9 +59,6 @@ public class MainActivity extends AppCompatActivity {
         ThreadPoolDemo threadPoolDemo = new ThreadPoolDemo();
         threadPoolDemo.getThreadPool();
         threadPoolDemo.test();
-//        ThreadPoolExample poolExample = new ThreadPoolExample();
-//        poolExample.test();
-
     }
 
 
