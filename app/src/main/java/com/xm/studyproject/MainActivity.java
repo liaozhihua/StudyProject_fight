@@ -1,10 +1,11 @@
 package com.xm.studyproject;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
-import com.xm.studyproject.java.UseAsynckTask;
+import com.xm.studyproject.android.AIDLActivity;
 import com.xm.studyproject.java.annotation.BindApi;
 import com.xm.studyproject.java.annotation.BindClick;
 import com.xm.studyproject.java.annotation.BindId;
@@ -25,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-//        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main);
         //设置
         BindApi.bind(this);
         tvAnnotation.setText  ("运行期通过注解来设置成员变量");
@@ -59,8 +60,10 @@ public class MainActivity extends AppCompatActivity {
 //        ThreadPoolDemo threadPoolDemo = new ThreadPoolDemo();
 //        threadPoolDemo.getThreadPool();
 //        threadPoolDemo.test();
-        UseAsynckTask asynckTask = new UseAsynckTask();
-        asynckTask.test();
+//        UseAsynckTask asynckTask = new UseAsynckTask();
+//        asynckTask.test();
+        Intent intent = new Intent(this, AIDLActivity.class);
+        startActivity(intent);
     }
 
 
