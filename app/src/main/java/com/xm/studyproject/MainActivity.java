@@ -4,10 +4,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import com.xm.studyproject.java.UseAsynckTask;
 import com.xm.studyproject.java.annotation.BindApi;
 import com.xm.studyproject.java.annotation.BindClick;
 import com.xm.studyproject.java.annotation.BindId;
-import com.xm.studyproject.java.thread.threadpool.ThreadPoolDemo;
 
 import androidx.annotation.Keep;
 import androidx.appcompat.app.AppCompatActivity;
@@ -56,9 +56,11 @@ public class MainActivity extends AppCompatActivity {
 //        LockDemo lockDemo = new LockDemo();
 //        lockDemo.test();
 //        lockDemo.test2();
-        ThreadPoolDemo threadPoolDemo = new ThreadPoolDemo();
-        threadPoolDemo.getThreadPool();
-        threadPoolDemo.test();
+//        ThreadPoolDemo threadPoolDemo = new ThreadPoolDemo();
+//        threadPoolDemo.getThreadPool();
+//        threadPoolDemo.test();
+        UseAsynckTask asynckTask = new UseAsynckTask();
+        asynckTask.test();
     }
 
 
