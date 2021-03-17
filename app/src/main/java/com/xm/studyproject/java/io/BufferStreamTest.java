@@ -10,6 +10,7 @@ import java.io.IOException;
 
 /**
  * 字节流的 缓冲流实例
+ * 为了提升Stream的执行效率，所以出现了bufferedOutputStream。bufferedOutputStream就是将本地添加了一个缓存的数组。在使用bufferedOutputStream之前每次从磁盘读入数据的时候都是需要访问多少byte数据就向磁盘中读多少个byte的数据，而出现bufferedOutputSteam之后，策略就改了，会先读取整个缓存空间相应大小的数据，这样就是从磁盘读取了一块比较大的数据，然后缓存起来，从而减少了对磁盘的访问的次数以达到提升性能的目的。
  */
 public class BufferStreamTest {
 

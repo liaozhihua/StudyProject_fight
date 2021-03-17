@@ -9,7 +9,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 /**
- * 字符输入流
+ * 字符输入、输出流
  */
 public class BufferReaderWriterTest {
 
