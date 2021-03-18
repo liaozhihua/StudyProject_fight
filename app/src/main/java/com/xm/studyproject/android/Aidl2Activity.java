@@ -17,7 +17,6 @@ import android.view.View;
 import java.util.List;
 
 import com.xm.studyproject.R;
-import com.xm.studyproject.android.aidl.Book;
 import com.xm.studyproject.android.aidl.User;
 import com.xm.studyproject.android.aidl.UserController;
 

@@ -19,11 +19,8 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity> <!-- android:exported 是Android中的四大组件 Activity，Service，Provider，Receiver 四大组件中都会有的一个属性。 -->
-        <!-- 总体来说它的主要作用是：是否支持其它应用调用当前组件。 -->
-        <!-- 默认值：如果包含有intent-filter 默认值为true; 没有intent-filter默认值为false。 -->
-        <!-- android:enabled="true" -->
-        <!-- 这个属性用于指示该服务是否能够被实例化。如果设置为true，则能够被实例化，否则不能被实例化。默认值是true。 -->
+        </activity>
+
         <service
             android:name=".android.aidl.AIDLService"
             android:enabled="true"
@@ -35,6 +32,13 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </service>
+        <!-- android:exported 是Android中的四大组件 Activity，Service，Provider，Receiver 四大组件中都会有的一个属性。 -->
+        <!-- 总体来说它的主要作用是：是否支持其它应用调用当前组件。 -->
+        <!-- 默认值：如果包含有intent-filter 默认值为true; 没有intent-filter默认值为false。 -->
+        <!-- android:enabled="true" -->
+        <!-- 这个属性用于指示该服务是否能够被实例化。如果设置为true，则能够被实例化，否则不能被实例化。默认值是true。 -->
+        <!-- android:process=":UserService"-->
+        <!--进程名冒号开头表明这虽然是远程进程 但是只允许当前程序调用-->
         <service
             android:name=".android.aidl.AIDLService2"
             android:enabled="true"
