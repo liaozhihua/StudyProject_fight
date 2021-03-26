@@ -1,19 +1,12 @@
 package com.xm.studyproject;
 
-import android.animation.ObjectAnimator;
-import android.animation.ValueAnimator;
 import android.os.Bundle;
 import android.view.animation.AlphaAnimation;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
 import android.view.animation.AnticipateInterpolator;
-import android.view.animation.LayoutAnimationController;
 import android.widget.Button;
-import android.widget.ListView;
 
-import com.xm.studyproject.android.anim.DecelerateAccelerateInterpolator;
-import com.xm.studyproject.android.anim.ObjectEvaluator;
-import com.xm.studyproject.android.anim.Point;
+import com.xm.studyproject.android.anim.propertyanimation.Ponit;
+import com.xm.studyproject.android.anim.propertyanimation.ValueAnimatorDemo;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -39,18 +32,37 @@ public class AnimActivity extends AppCompatActivity {
 //        Animation animation = AnimationUtils.loadAnimation(this, R.anim.scale_test);
 //        button.startAnimation(animation);
 
-        ObjectAnimator animator  = ObjectAnimator.ofFloat(button, "translationX", 100, 500);
-        animator.setDuration(5000);
-        animator.setInterpolator(new DecelerateAccelerateInterpolator());
-        animator.start();
+//        ObjectAnimator animator  = ObjectAnimator.ofFloat(button, "translationX", 100, 500);
+//        animator.setDuration(5000);
+//        animator.setInterpolator(new DecelerateAccelerateInterpolator());
+//        animator.start();
+//
+//        ValueAnimator valueAnimator = ValueAnimator.ofObject(new ObjectEvaluator(), new Point(200, 200), new Point(600, 600));
+//        ListView listview = findViewById(R.id.listview);
+//        Animation animation = AnimationUtils.loadAnimation(this, R.anim.view_animation);
+//        LayoutAnimationController controller = new LayoutAnimationController(animation);
+//        controller.setOrder(LayoutAnimationController.ORDER_NORMAL);
+//        controller.setDelay(0.5f);
+//        listview.setLayoutAnimation(controller);
 
-        ValueAnimator valueAnimator = ValueAnimator.ofObject(new ObjectEvaluator(), new Point(200, 200), new Point(600, 600));
-        ListView listview = findViewById(R.id.listview);
-        Animation animation = AnimationUtils.loadAnimation(this, R.anim.view_animation);
-        LayoutAnimationController controller = new LayoutAnimationController(animation);
-        controller.setOrder(LayoutAnimationController.ORDER_NORMAL);
-        controller.setDelay(0.5f);
-        listview.setLayoutAnimation(controller);
+        //通过java实现属性动画
+//        ValueAnimatorDemo animatorDemo = new ValueAnimatorDemo();
+//        animatorDemo.ofInt(button,100,500);
 
+        ValueAnimatorDemo animatorDemo = new ValueAnimatorDemo();
+        animatorDemo.ofObject(button,new Ponit(100,100),new Ponit(500,100));
+
+
+        //通过xml实现属性动画value
+//        ValueAnimator animator = (ValueAnimator) AnimatorInflater.loadAnimator(this, R.animator.value_animator);
+//        animator.setTarget(button);
+//        animator.start();
+//        animator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+//            @Override
+//            public void onAnimationUpdate(ValueAnimator animation) {
+//                button.getLayoutParams().width = (int) animation.getAnimatedValue();
+//                button.requestLayout();
+//            }
+//        });
     }
 }
