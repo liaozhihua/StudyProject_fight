@@ -9,6 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".AnimActivity"></activity>
         <activity
             android:name=".android.Aidl2Activity"></activity>
         <activity android:name=".android.AIDLActivity"></activity>
