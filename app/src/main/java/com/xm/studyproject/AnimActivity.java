@@ -1,12 +1,11 @@
 package com.xm.studyproject;
 
+import android.animation.AnimatorSet;
+import android.animation.ObjectAnimator;
 import android.os.Bundle;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.AnticipateInterpolator;
 import android.widget.Button;
-
-import com.xm.studyproject.android.anim.propertyanimation.Ponit;
-import com.xm.studyproject.android.anim.propertyanimation.ValueAnimatorDemo;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -49,8 +48,8 @@ public class AnimActivity extends AppCompatActivity {
 //        ValueAnimatorDemo animatorDemo = new ValueAnimatorDemo();
 //        animatorDemo.ofInt(button,100,500);
 
-        ValueAnimatorDemo animatorDemo = new ValueAnimatorDemo();
-        animatorDemo.ofObject(button,new Ponit(100,100),new Ponit(500,100));
+//        ValueAnimatorDemo animatorDemo = new ValueAnimatorDemo();
+//        animatorDemo.ofObject(button,new Ponit(100,100),new Ponit(500,100));
 
 
         //通过xml实现属性动画value
@@ -64,5 +63,21 @@ public class AnimActivity extends AppCompatActivity {
 //                button.requestLayout();
 //            }
 //        });
+
+
+//        ObjectAnimatorDemo animatorDemo = new ObjectAnimatorDemo();
+//        animatorDemo.ofFloat(button,"translationX",0,300);
+//
+//        ObjectAnimator animator = (ObjectAnimator) AnimatorInflater.loadAnimator(this, R.animator.obect_animator);
+//        animator.setTarget(button);
+//        animator.start();
+
+        AnimatorSet animatorSet = new AnimatorSet();
+        ObjectAnimator rotate = ObjectAnimator.ofFloat(button, "rotation", 0, 270);
+        ObjectAnimator translation = ObjectAnimator.ofFloat(button, "translationX", 100,500);
+        animatorSet.play(rotate).after(translation);
+        animatorSet.setDuration(5000);
+        animatorSet.start();
+
     }
 }
