@@ -33,6 +33,8 @@ public class ValueAnimatorDemo {
     public void ofObject(final View view, Ponit ... values) {
         ValueAnimator valueAnimator = ValueAnimator.ofObject(new ObjectEvaluator(), values[0], values[1]);
         valueAnimator.setTarget(view);
+        valueAnimator.setDuration(3000);
+        valueAnimator.setRepeatCount(ValueAnimator.INFINITE);
         valueAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
             @Override
             public void onAnimationUpdate(ValueAnimator animation) {
