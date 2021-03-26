@@ -1,7 +1,5 @@
 package com.xm.studyproject;
 
-import android.animation.AnimatorSet;
-import android.animation.ObjectAnimator;
 import android.os.Bundle;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.AnticipateInterpolator;
@@ -72,12 +70,15 @@ public class AnimActivity extends AppCompatActivity {
 //        animator.setTarget(button);
 //        animator.start();
 
-        AnimatorSet animatorSet = new AnimatorSet();
-        ObjectAnimator rotate = ObjectAnimator.ofFloat(button, "rotation", 0, 270);
-        ObjectAnimator translation = ObjectAnimator.ofFloat(button, "translationX", 100,500);
-        animatorSet.play(rotate).after(translation);
-        animatorSet.setDuration(5000);
-        animatorSet.start();
+//        AnimatorSet animatorSet = new AnimatorSet();
+//        ObjectAnimator rotate = ObjectAnimator.ofFloat(button, "rotation", 0, 270);
+//        ObjectAnimator translation = ObjectAnimator.ofFloat(button, "translationX", 100,500);
+//        animatorSet.play(rotate).after(translation);
+//        animatorSet.setDuration(5000);
+//        animatorSet.start();
+
+        //ViewPropertyAnimator用法 缺陷：好像没发设置播放次数
+        button.animate().translationX(500).rotation(90).setDuration(3000);
 
     }
 }
