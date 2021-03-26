@@ -5,8 +5,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
-import com.xm.studyproject.android.AIDLActivity;
-import com.xm.studyproject.android.Aidl2Activity;
 import com.xm.studyproject.java.annotation.BindApi;
 import com.xm.studyproject.java.annotation.BindClick;
 import com.xm.studyproject.java.annotation.BindId;
@@ -65,7 +63,8 @@ public class MainActivity extends AppCompatActivity {
 //        asynckTask.test();
 //        Intent intent = new Intent(this, AIDLActivity.class);
 //        startActivity(intent);
-        Intent intent = new Intent(this, Aidl2Activity.class);
+//        Intent intent = new Intent(this, Aidl2Activity.class);
+        Intent intent = new Intent(this, AnimActivity.class);
         startActivity(intent);
     }
 
