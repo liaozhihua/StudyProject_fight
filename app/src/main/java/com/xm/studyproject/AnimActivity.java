@@ -49,7 +49,6 @@ public class AnimActivity extends AppCompatActivity {
 //        ValueAnimatorDemo animatorDemo = new ValueAnimatorDemo();
 //        animatorDemo.ofObject(button,new Ponit(100,100),new Ponit(500,100));
 
-
         //通过xml实现属性动画value
 //        ValueAnimator animator = (ValueAnimator) AnimatorInflater.loadAnimator(this, R.animator.value_animator);
 //        animator.setTarget(button);
